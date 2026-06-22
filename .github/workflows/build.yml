@@ -93,7 +93,7 @@ jobs:
           sudo chmod +x "$ARCHITECTURE/build.sh"
 
           if [ "$ARCHITECTURE" = "armhf" ]; then
-            sudo ../ruri -a armv7l -q /usr/bin/qemu-arm-static ./$ARCHITECTURE /bin/sh /build.sh
+            sudo ../ruri -a arm -q /usr/bin/qemu-arm-static ./$ARCHITECTURE /bin/sh /build.sh
           else
             sudo ../ruri -a $ARCHITECTURE -q /usr/bin/qemu-$ARCHITECTURE-static ./$ARCHITECTURE /bin/sh /build.sh
           fi
